@@ -1,3 +1,4 @@
+# problem: https://open.kattis.com/problems/faktor
 # 1.1 get input from console
 input = gets.chomp # input example: 38 24
 inputArr = input.split(' ') # split input with space and store it in array
