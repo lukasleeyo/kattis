@@ -32,19 +32,14 @@
 # 1.1 get input from console
 x_megabytes_month = gets.chomp.to_i
 first_n_months = gets.chomp.to_i
-p_megabytes_consumed_month_arr = []
+megabytes_available = 0 #default megabytes left should be 0
 # prompt user for megabytes consumed per month based on first_n_months value
 first_n_months.times do 
     p_megabytes_consumed_month = gets.chomp.to_i
-    p_megabytes_consumed_month_arr.push(p_megabytes_consumed_month) # store to array for later computation
+    megabytes_available += x_megabytes_month - p_megabytes_consumed_month # accumulate (AKA transfer to next month) the megabytes_available each time the mb is used from the x_megabytes_month monthly 
 end
 
-megabytes_left = 0 #default megabytes left should be 0
-p_megabytes_consumed_month_arr.each do |mb|
-    megabytes_left += x_megabytes_month - mb # accumulate (AKA transfer to next month) the megabytes_left each time the mb is used from the x_megabytes_month monthly 
-end
-
-puts megabytes_left + x_megabytes_month # add the megabytes_left by x_megabytes_month to renew the data each month for subsequent n + 1 months
+puts megabytes_available + x_megabytes_month # add the megabytes_available by x_megabytes_month to renew the data each month for subsequent n + 1 months
 
 
 
