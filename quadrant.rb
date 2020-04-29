@@ -8,14 +8,14 @@ y_axis = y_input.to_i
 
 quadrant = 0
 # determine x,y axis belongs to which quadrant
-if(x_axis > 0 && y_axis > 0) # case 1: both x and y axis are positive value
-    quadrant = 1
-elsif(x_axis < 0 && y_axis > 0) # case 2: x is negative, y is positive
-    quadrant = 2
-elsif(x_axis < 0 && y_axis < 0 ) # case 3: both x,y are negative
-    quadrant = 3
+if (x_axis > 0 && y_axis > 0) # case 1: both x and y axis are positive value
+  quadrant = 1
+elsif (x_axis < 0 && y_axis > 0) # case 2: x is negative, y is positive
+  quadrant = 2
+elsif (x_axis < 0 && y_axis < 0) # case 3: both x,y are negative
+  quadrant = 3
 else # case 4: x is positive, y is negative
-    quadrant = 4
+  quadrant = 4
 end
 # prints the result
 print(quadrant)

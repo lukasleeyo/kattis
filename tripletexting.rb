@@ -7,6 +7,4 @@ each_word_length = length_of_text / 3
 # scan for words by number of character for each word; source: https://stackoverflow.com/questions/754407/what-is-the-best-way-to-chop-a-string-into-chunks-of-a-given-length-in-ruby
 text_arr = text_input.scan(/.{1,#{each_word_length}}/)
 # find duplicate word, and that duplicate word will be the correct answer
- puts text_arr.detect {|e| text_arr.count(e) > 1}
-
-
+puts text_arr.detect { |e| text_arr.count(e) > 1 }
